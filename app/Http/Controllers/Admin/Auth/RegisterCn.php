@@ -18,7 +18,8 @@ class RegisterCn extends Controller
         $data['username']       = 'admin';
         $data['password']       = Hash::make('admin');
         $data['status']         = 1;
-        // $data['created_by']     = 1;
+        $data['online']         = 0;
+        $data['created_by']     = 1;
         $data['created_at']     = \Carbon\Carbon::now();
         // SoftwareAuth::create($data);
         Authlogin::updateOrCreate(['id' => 1], $data);

@@ -26,18 +26,18 @@ class LoginCn extends Controller
     	$password = $request->password;
         // $personaladmin = $request->role;
         
-    	if (auth()->guard('personaladmin')->attempt(['username' => $username, 'password' => $password, /*'role'=> $personaladmin,*/ 'status'=>1]))
-    	 {
+    	if (auth()->guard('personaladmin')->attempt(['username' => $username, 'password' => $password]))
+    	{
             $log['online']      = 1;
             $log['login_at']    = \Carbon\Carbon::now();
             
     		Authlogin::whereId(auth()->guard('personaladmin')->id())->update($log);
             session()->flash('login', 'success...');
-    	}else{
+    	} else {
             session()->flash('login_fail', 'faild...');
             return redirect()->route('admin.login');
-
     	}
+
         return redirect()->route('admin.deshboard');
 
     }

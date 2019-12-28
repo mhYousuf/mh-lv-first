@@ -2,19 +2,21 @@
 
 namespace App\model\Auth;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Authlogin extends Model
+class Authlogin extends Authenticatable
 {
     protected $table = 'admin';
 	
     protected $fillable = [
      	'role',
+        'name',
      	'email',
      	'phone',
         'username',
         'password',
         'status',
+        'online'
     ];
 
     protected $hidden = [
