@@ -49,7 +49,7 @@ class SocialCn extends Controller
     	}
 
     	session()->put('social', Social::find(1));
-    	return redirect('deshboard/social');
+    	return redirect()->route('admin.social');
     }
 
     public function destroy(Request $request, $id)

@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <h2 class="card-title">Social Icon Form</h2>
                     <br>
-                    <form class="" action="{{ route('social.store') }}" method="post" enctype="multipart/form-data">
+                    <form class="" action="{{ route('admin.social.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group col-md-12">
                             <label for="form_heading">Icon</label>
@@ -34,7 +34,7 @@
                         <div class="form-group">
                             <input type="hidden" name="id" id="id" value="{{ (isset($value)) ? $value->id : ''}}">
                             <button type="submit" class="btn btn-success mr-2">{{ (isset($value)) ? 'Update' : 'Save' }}</button>
-                            <a href="{{url('basic')}}" class="btn btn-light">Cancel</a>
+                            <a href="{{route('admin.social')}}" class="btn btn-light">Cancel</a>
                         </div>
                     </form>
                 </div>

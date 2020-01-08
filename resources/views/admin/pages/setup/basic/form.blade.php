@@ -1,12 +1,26 @@
 @extends('admin.layout.layout')
 @section('content')
 <div class="content-wrapper">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-light">
+            <li class="breadcrumb-item">
+                <a href="#">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#">Setup</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Basic Manage Form</li>
+        </ol>
+    </nav><br><br>
     <div class="row">
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Basic form</h4>
-                    <form class="" action="{{ route('edit.store') }}" method="post" enctype="multipart/form-data">
+                    <div class="form-group remove-x">
+                        <a href="{{ route('admin.basic') }}"><i class="remove mdi mdi-close-circle-outline"></i></a>
+                        <h3 class="">Basic Manage form</h3>
+                    </div><br>
+                    <form class="" action="{{ route('admin.edit.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="form-group col-md-6">
@@ -65,8 +79,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group col-12">
-                            <div class="row form_box">
+                        <!-- <div class="form-group col-12"> -->
+                            <div class="row">
                                 <div class="col-md-6 form-group">
                                     <label class="form_heading">Status</label><i class="fa fa-star fill" aria-hidden="true"></i>
                                     <select class="form-control prompt nice_select wide" name="status" id="status" >
@@ -80,7 +94,7 @@
                                     <input type="text" class="form-control" id="copy_year" name="copy_year" placeholder="Copyright Year" required value="{{ isset($value) ? $value->copy_year : '' }}"> 
                                 </div>
                             </div>
-                        </div>
+                        <!-- </div> -->
 
                         <div class="form-group">
                             <label for="">Footer Description</label>
@@ -90,7 +104,7 @@
                         <div class="form-group">
                             <input type="hidden" name="id" id="id" value="{{ (isset($value)) ? $value->id : ''}}">
                             <button type="submit" class="btn btn-success mr-2">{{ (isset($value)) ? 'Update' : 'Save' }}</button>
-                            <a href="{{ route('basic') }}" class="btn btn-light">Cancel</a>
+                            <a href="{{ route('admin.basic') }}" class="btn btn-light">Cancel</a>
                         </div>
                     </form>
                 </div>

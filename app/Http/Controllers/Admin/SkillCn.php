@@ -52,7 +52,7 @@ class SkillCn extends Controller
     	}
 
     	session()->put('skill', Skill::find(1));
-    	return redirect('deshboard/skill');
+    	return redirect()->route('admin.skill');
     }
 
     public function destroy($id)

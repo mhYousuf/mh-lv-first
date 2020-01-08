@@ -9,6 +9,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-    	return view('web.pages.blog.blog');
+    	// return view('web.pages.blog.blog');
+    	echo"blog";
     }
 }

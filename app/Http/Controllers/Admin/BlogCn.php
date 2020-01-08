@@ -70,7 +70,7 @@ class BlogCn extends Controller
         }
 
         session()->put('blog', Blog::find(1));
-        return redirect('deshboard/blog');
+        return redirect()->route('admin.blog');
     }
 
     public function destroy($id)

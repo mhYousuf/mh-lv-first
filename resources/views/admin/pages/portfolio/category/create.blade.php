@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Category Form</h4>
                     <br>
-                    <form class="" action="{{ route('category.store') }}" method="post" enctype="multipart/form-data">
+                    <form class="" action="{{ route('admin.category.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row form_box">
                             <div class="form-group col-md-12">
@@ -32,7 +32,7 @@
                         <div class="form-group">
                             <input type="hidden" name="id" id="id" value="{{ (isset($value)) ? $value->id : ''}}">
                             <button type="submit" class="btn btn-success mr-2">{{ (isset($value)) ? 'Update' : 'Save' }}</button>
-                            <a href="{{ route('category') }}" class="btn btn-light">Cancel</a>
+                            <a href="{{ route('admin.category') }}" class="btn btn-light">Cancel</a>
                         </div>
                     </form>
                 </div>

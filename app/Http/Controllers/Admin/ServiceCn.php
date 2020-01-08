@@ -49,7 +49,7 @@ class ServiceCn extends Controller
 
    	}
    		session()->put('service', Service::find(1));
-        return redirect('deshboard/srervice');
+        return redirect()->route('admin.service');
    }
 
 

@@ -57,7 +57,7 @@ class ResumeCn extends Controller
    	}
 
    	session()->put('resume', Resume::find(1));
-   	return redirect('deshboard/resume');
+   	return redirect()->route('admin.resume');
 
    }
 

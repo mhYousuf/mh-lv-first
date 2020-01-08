@@ -69,7 +69,7 @@ class SliderCn extends Controller
         }
 
         session()->put('slider', Slider::find(1));
-        return redirect('deshboard/slider');
+        return redirect()->route('admin.slider');
     }
 
     public function destroy(Request $request, $id)

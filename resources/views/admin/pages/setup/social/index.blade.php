@@ -9,7 +9,7 @@
                     <i class="feather icon-plus"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" id="" href="{{url('social/create')}}" >&nbsp; Add new</a>
+                    <a class="dropdown-item" id="" href="{{url('admin/social/create')}}" >&nbsp; Add new</a>
                 </div>
             </div>
         </div>
@@ -46,10 +46,10 @@
                     </td>
                
                     <td align="center">
-                        <a class="btn btn-icons btn-rounded btn-success" href="{{ url('social/create/'.$v->id) }}" id="{{ $v->id }}">
+                        <a class="btn btn-icons btn-rounded btn-success" href="{{ url('admin/social/create/'.$v->id) }}" id="{{ $v->id }}">
                             <i class="mdi mdi-plus"></i>
                         </a>
-                        <button class="btn btn-icons btn-rounded btn-danger del_btn" data-href="{{ url('social/destroy/'.$v->id) }}" data-id="{{ $v->id }}" ><i class="mdi mdi-delete"></i></button>
+                        <button class="btn btn-icons btn-rounded btn-danger del_btn" data-href="{{ url('admin/social/destroy/'.$v->id) }}" data-id="{{ $v->id }}" ><i class="mdi mdi-delete"></i></button>
                     </td>
                 </tr>
                 @endforeach

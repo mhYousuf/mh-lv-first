@@ -48,7 +48,7 @@ class CategoryCn extends Controller
 		}
 
 		session()->put('category', Category::find(1));
-		return redirect('deshboard/category');
+		return redirect()->route('admin.category');
 	}
 
 	public function destroy(Request $request, $id)

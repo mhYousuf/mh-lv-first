@@ -5,9 +5,9 @@
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">About form</h4>
+                    <h4 class="card-title">Service form</h4>
                     <br>
-                    <form class="" action="{{ route('service.store') }}" method="post" enctype="multipart/form-data">
+                    <form class="" action="{{ route('admin.service.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="form-group col-md-12">
@@ -51,7 +51,7 @@
                         <div class="form-group">
                             <input type="hidden" name="id" id="id" value="{{ (isset($value)) ? $value->id : ''}}">
                             <button type="submit" class="btn btn-success mr-2">{{ (isset($value)) ? 'Update' : 'Save' }}</button>
-                            <a href="{{ route('service') }}" class="btn btn-light">Cancel</a>
+                            <a href="{{ route('admin.service') }}" class="btn btn-light">Cancel</a>
                         </div>
                     </form>
                 </div>

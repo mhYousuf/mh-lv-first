@@ -126,7 +126,7 @@
         <a class="dropdown-item mt-2"> Manage Accounts </a>
         <a class="dropdown-item"> Change Password </a>
         <a class="dropdown-item"> Check Inbox </a>
-        <a class="dropdown-item"> Sign Out </a>
+        <a class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="mdi mdi-logout"></i> Sign Out </a>
       </div>
     </li>
   </ul>
@@ -134,3 +134,7 @@
     <span class="icon-menu"></span>
   </button>
 </div>
+
+<form id="logout-form" action="{{ route('auth.logout') }}" method="POST" style="display: none;">
+    @csrf
+</form>

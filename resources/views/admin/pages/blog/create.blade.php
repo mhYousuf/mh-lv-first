@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Blog form</h4>
                     <br>
-                    <form class="" action="{{ route('blog.store') }}" method="post" enctype="multipart/form-data">
+                    <form class="" action="{{ route('admin.blog.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="form-group col-md-6">
@@ -56,12 +56,12 @@
                         </div>
                         <div class="form-group">
                             <label for="">Description</label>
-                            <textarea type="text" class="form-control" rows="7" id="description" name="description" placeholder="description" required value="{{ isset($value) ? $value->description : '' }}">{{ isset($value) ? $value->description : '' }}</textarea>
+                            <textarea type="text" class="form-control" rows="7" id="description" name="description" placeholder="Description" required value="{{ isset($value) ? $value->description : '' }}">{{ isset($value) ? $value->description : '' }}</textarea>
                         </div>
                         <div class="form-group">
                             <input type="hidden" name="id" id="id" value="{{ (isset($value)) ? $value->id : ''}}">
                             <button type="submit" class="btn btn-success mr-2">{{ (isset($value)) ? 'Update' : 'Save' }}</button>
-                            <a href="{{ route('blog') }}" class="btn btn-light">Cancel</a>
+                            <a href="{{ route('admin.blog') }}" class="btn btn-light">Cancel</a>
                         </div>
                     </form>
                 </div>

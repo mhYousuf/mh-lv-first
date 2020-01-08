@@ -21,7 +21,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--=================================
   loading -->
 
-
 <!--=================================
   header -->
    
@@ -31,17 +30,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!--=================================
   header -->
-    @include('web.partials.backimg')
-
-
 <!--=================================
   intro --> 
  
     @yield('content')
-
+<!-- ================== -->
+<!-- contact -->
+@include('web.partials.contact')
  <!--=================================
- color customizer --> 
- 
+ contact--> 
 
 <!--=================================
  javascript --> 
@@ -49,7 +46,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- jquery -->
     @include('web.partials.js_file')
 
-  
- 
 </body>
 </html> 

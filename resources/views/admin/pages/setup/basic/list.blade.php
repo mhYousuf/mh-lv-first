@@ -3,13 +3,23 @@
 <div class="content-wrapper">
     <div class="content-header-right text-md-right col-md-12 col-12">
         <div class="form-group">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-light">
+                    <li class="breadcrumb-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Setup</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Basic Manage</li>
+                </ol>
+            </nav>
             <div class="dropdownx">
                 <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <!-- <i class="feather icon-settings"></i> -->
                     <i class="feather icon-plus"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" id="" href="{{url('form')}}" >&nbsp; Add new</a>
+                    <a class="dropdown-item" id="" href="{{url('admin/basic/form')}}" >&nbsp; Add new</a>
                 </div>
             </div>
         </div>
@@ -57,10 +67,10 @@
                     <label class="badge badge-danger">Pending</label>
                   </td> -->
                   <td align="center">
-                    <a class="btn btn-icons btn-rounded btn-success" href="{{ url('form/'.$v->id)}}" id="{{ $v->id }}">
+                    <a class="btn btn-icons btn-rounded btn-success" href="{{ url('admin/basic/form/'.$v->id)}}" id="{{ $v->id }}">
                         <i class="mdi mdi-plus"></i>
                     </a>
-                    <button class="btn btn-icons btn-rounded btn-danger del_btn" data-href="{{ url('destroy/'.$v->id) }}" data-id="{{ $v->id }}" ><i class="mdi mdi-delete"></i></button>
+                    <!-- <button class="btn btn-icons btn-rounded btn-danger del_btn" data-href="{{ url('admin/basic/destroy/'.$v->id) }}" data-id="{{ $v->id }}" ><i class="mdi mdi-delete"></i></button> -->
                   </td>
                 </tr>
                 @endforeach

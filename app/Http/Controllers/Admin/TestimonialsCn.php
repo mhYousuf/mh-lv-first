@@ -69,7 +69,7 @@ class TestimonialsCn extends Controller
         }
 
         session()->put('testimonial', Testimonial::find(1));
-        return redirect('deshboard/testimonials');
+        return redirect()->route('admin.testimonials');
     }
 
     public function destroy($id)

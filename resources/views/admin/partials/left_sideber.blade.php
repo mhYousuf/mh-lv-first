@@ -26,7 +26,7 @@
       <div class="collapse" id="dashboard-dropdown">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('deshboard') }}">Dashboard 1</a>
+            <a class="nav-link" href="{{ route('admin.deshboard') }}">Dashboard 1</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/dashboards/dashboard-2.html">Dashboard 2</a>
@@ -43,10 +43,11 @@
       <div class="collapse" id="page-layouts">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('basic') }}">Basic Manage</a>
+            <a class="nav-link" href="{{ route('admin.basic') }}"><span class="dot-indicator bg-success" style="margin-right: 10px;"></span> Basic Manage</a>
+            
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('social') }}">Social Icon</a>
+            <a class="nav-link" href="{{ route('admin.social') }}"><span class="dot-indicator bg-success" style="margin-right: 10px;"></span> Social Icon</a>
           </li>
         </ul>
       </div>
@@ -54,7 +55,7 @@
 
     <!-- ====slider==== -->
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('slider') }}">
+      <a class="nav-link" href="{{ route('admin.slider') }}">
         <i class="menu-icon mdi mdi-notification-clear-all"></i>
         <span class="menu-title">Slider </span>
       </a>
@@ -62,7 +63,7 @@
     <!-- =====slider==== -->
     <!-- about -->
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('about.us') }}">
+      <a class="nav-link" href="{{ route('admin.about.us') }}">
         <i class="menu-icon mdi mdi-notification-clear-all"></i>
         <span class="menu-title">About </span>
       </a>
@@ -70,7 +71,7 @@
     <!-- end about -->
     <!-- =======service====== -->
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('service') }}">
+      <a class="nav-link" href="{{ route('admin.service') }}">
         <i class="menu-icon mdi mdi-notification-clear-all"></i>
         <span class="menu-title">Service </span>
       </a>
@@ -79,7 +80,7 @@
 
     <!-- ======Resume===== -->
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('resume') }}">
+      <a class="nav-link" href="{{ route('admin.resume') }}">
         <i class="menu-icon mdi mdi-notification-clear-all"></i>
         <span class="menu-title">Resume </span>
       </a>
@@ -87,7 +88,7 @@
     <!-- ======end resume===== -->
     <!-- ======Skill==== -->
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('skill') }}">
+      <a class="nav-link" href="{{ route('admin.skill') }}">
         <i class="menu-icon mdi mdi-notification-clear-all"></i>
         <span class="menu-title">My Skill </span>
       </a>
@@ -96,7 +97,7 @@
 
     <!-- =====Blog===== -->
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('blog') }}">
+      <a class="nav-link" href="{{ route('admin.blog') }}">
         <i class="menu-icon mdi mdi-notification-clear-all"></i>
         <span class="menu-title">Blog </span>
       </a>
@@ -105,7 +106,7 @@
 
     <!-- ====Testimonials==== -->
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('testimonials') }}">
+      <a class="nav-link" href="{{ route('admin.testimonials') }}">
         <i class="menu-icon mdi mdi-notification-clear-all"></i>
         <span class="menu-title">Testimonials </span>
       </a>
@@ -120,42 +121,26 @@
       <div class="collapse" id="apps-dropdown">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('category') }}">Category</a>
+            <a class="nav-link" href="{{ route('admin.category') }}"><span class="dot-indicator bg-success" style="margin-right: 10px;"></span> Category</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('category.details') }}">Category Details</a>
+            <a class="nav-link" href="{{ route('admin.category.details') }}"><span class="dot-indicator bg-success" style="margin-right: 10px;"></span> Category Details</a>
           </li>
         </ul>
       </div>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="pages/samples/widgets.html">
-        <i class="menu-icon mdi mdi-trackpad"></i>
-        <span class="menu-title">Widgets</span>
-      </a>
-    </li>
+   
     <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#sidebar-layouts" aria-expanded="false" aria-controls="sidebar-layouts">
         <i class="menu-icon mdi mdi-texture"></i>
-        <span class="menu-title">Sidebar Layouts</span>
+        <span class="menu-title">Security</span>
         <i class="menu-arrow"></i>
       </a>
       <div class="collapse" id="sidebar-layouts">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="pages/layout/compact-menu.html">Compact menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/layout/sidebar-collapsed.html">Icon menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/layout/sidebar-hidden.html">Sidebar Hidden</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/layout/sidebar-hidden-overlay.html">Sidebar Overlay</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/layout/sidebar-fixed.html">Sidebar Fixed</a>
+            <a class="nav-link" href="{{ route('auth.change.index') }}">
+                <span class="dot-indicator bg-success" style="margin-right: 10px;"></span>  Change Password</a>
           </li>
         </ul>
       </div>

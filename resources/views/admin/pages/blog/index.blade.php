@@ -9,7 +9,7 @@
                     <i class="feather icon-plus"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" id="" href="{{ url('blog/create/form') }}" >&nbsp; Add new</a>
+                    <a class="dropdown-item" id="" href="{{ url('admin/blog/form') }}" >&nbsp; Add new</a>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
                   <!-- <td align="left">{{$v->socail_link}}</td> -->
                   <td align="left"> <img src="{{url('back_end/upload/blog/'.$v->image)}}" style="height: 60px !important; width: 80px !important; "></td>
                   <!-- <td><img src="{{url('back_end/upload/basic/'.$v->footer_logo)}}" style="height: 60px !important; width: 80px !important; "></td> -->
-                  <td align="left" title="{{ $v->description }}">{!! substr(strip_tags($v->description), 0, 50) !!}...</td>
+                  <td align="left" title="{{ $v->description }}">{!! substr(strip_tags($v->description), 0, 20) !!}...</td>
                   <td align="left">
                         
                         @if($v->status == 1)
@@ -63,10 +63,10 @@
                     <label class="badge badge-danger">Pending</label>
                   </td> -->
                   <td align="center">
-                    <a class="btn btn-icons btn-rounded btn-success" href="{{ url('blog/create/form/'.$v->id) }}" id="{{ $v->id }}">
+                    <a class="btn btn-icons btn-rounded btn-success" href="{{ url('admin/blog/form/'.$v->id) }}" id="{{ $v->id }}">
                         <i class="mdi mdi-plus"></i>
                     </a>
-                    <button class="btn btn-icons btn-rounded btn-danger del_btn" data-href="{{ url('blog/destroy/'.$v->id) }}" data-id="{{ $v->id }}" ><i class="mdi mdi-delete"></i></button>
+                    <button class="btn btn-icons btn-rounded btn-danger del_btn" data-href="{{ url('admin/blog/destroy/'.$v->id) }}" data-id="{{ $v->id }}" ><i class="mdi mdi-delete"></i></button>
                   </td>
                 </tr>
                 @endforeach

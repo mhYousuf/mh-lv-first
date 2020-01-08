@@ -78,7 +78,7 @@ class BasicCn extends Controller
         }
         
         session()->put('basic', Basic::find(1));
-        return redirect('deshboard/basic');
+        return redirect()->route('admin.basic');
    	
    	 // return response()->json($basic);
 

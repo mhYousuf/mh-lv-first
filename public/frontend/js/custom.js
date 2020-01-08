@@ -159,13 +159,15 @@ NOTE:
 *************************/
   var win = $(window),
       foo = $('#typer');
-      foo.typer(['<h2>Affiliate Blogger </h2>', '<h2> Freelance Copywriter</h2>' ]);
+      foo.typer(['<h2>Web Designer</h2>', '<h2> Web Developer</h2>' ]);
             win.resize(function(){
               var fontSize = Math.max(Math.min(win.width() / (1 * 10), parseFloat(Number.POSITIVE_INFINITY)), parseFloat(Number.NEGATIVE_INFINITY));
               foo.css({
               fontSize: fontSize * .3 + 'px'
             });
   }).resize();
+
+            
 
 /*************************
           Skill

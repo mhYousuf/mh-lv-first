@@ -8,16 +8,16 @@
                 <div class="card-body">
                     <h4 class="card-title">Resume form</h4>
                     <br>
-                    <form class="" action="{{ route('resume.store') }}" method="post" enctype="multipart/form-data">
+                    <form class="" action="{{ route('admin.resume.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="exampleInputName1">Experience Name</label>
-                                <input type="text" class="form-control" id="ex_name" name="ex_name" placeholder="Name" required value="{{ isset($value) ? $value->ex_name : '' }}"> 
+                                <input type="text" class="form-control" id="ex_name" name="ex_name" placeholder="Experience Name" required value="{{ isset($value) ? $value->ex_name : '' }}"> 
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="exampleInputName1">Experience Title</label>
-                                <input type="text" class="form-control" id="ex_title" name="ex_title" placeholder="ex_title" required value="{{ isset($value) ? $value->ex_title : '' }}"> 
+                                <input type="text" class="form-control" id="ex_title" name="ex_title" placeholder="Experience Title" required value="{{ isset($value) ? $value->ex_title : '' }}"> 
                             </div>
                         </div>
                         <div class="row">
@@ -35,11 +35,11 @@
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="exampleInputName1">Education Name</label>
-                                <input type="text" class="form-control" id="ed_name" name="ed_name" placeholder="Name" required value="{{ isset($value) ? $value->ed_name : '' }}"> 
+                                <input type="text" class="form-control" id="ed_name" name="ed_name" placeholder="Education Name" required value="{{ isset($value) ? $value->ed_name : '' }}"> 
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="exampleInputName1">Education Title</label>
-                                <input type="text" class="form-control" id="ed_title" name="ed_title" placeholder="ed_title" required value="{{ isset($value) ? $value->ed_title : '' }}"> 
+                                <input type="text" class="form-control" id="ed_title" name="ed_title" placeholder="Education Title" required value="{{ isset($value) ? $value->ed_title : '' }}"> 
                             </div>
                         </div>
                         <div class="row">
@@ -50,7 +50,7 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="exampleInputEmail3">Education Date</label>
-                                <input type="text" class="form-control" id="ed_date" name="ed_date" placeholder="ed_date" required value="{{ isset($value) ? $value->ed_date : '' }}"> 
+                                <input type="text" class="form-control" id="ed_date" name="ed_date" placeholder="Education Date" required value="{{ isset($value) ? $value->ed_date : '' }}"> 
                             </div>
                         </div>
                         <div class="row">
@@ -83,7 +83,7 @@
                         <div class="form-group">
                             <input type="hidden" name="id" id="id" value="{{ (isset($value)) ? $value->id : ''}}">
                             <button type="submit" class="btn btn-success mr-2">{{ (isset($value)) ? 'Update' : 'Save' }}</button>
-                            <a href="{{ route('resume') }}" class="btn btn-light">Cancel</a>
+                            <a href="{{ route('admin.resume') }}" class="btn btn-light">Cancel</a>
                         </div>
                     </form>
                 </div>

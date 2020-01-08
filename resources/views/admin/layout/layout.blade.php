@@ -3,7 +3,7 @@
 <head>
     @include('admin.partials.head')
 </head>
-<body>
+<body class="sidebar-fixed">
     <div class="container-scroller">
         <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             @include('admin.partials.navbar')
@@ -22,7 +22,8 @@
         </div>
     </div>
     <!-- End custom js for this page-->
-        @include('admin.partials.js_link')
+    @include('admin.partials.js_link')
+
     @if(session('insert'))
         <script type="text/javascript">
             $.toast({
@@ -45,6 +46,22 @@
           loaderBg: '#f96868',
           position: 'top-right'
         });
+    </script>
+    @endif
+
+    @if (session('change'))
+    <script type="text/javascript">
+        swal({
+        title: 'Congratulations!',
+        text: 'Your Password Change Is Successfully',
+        icon: 'success',
+        button: {
+          text: "Continue",
+          value: true,
+          visible: true,
+          className: "btn btn-success"
+        }
+      });
     </script>
     @endif
 

@@ -9,14 +9,14 @@
                     <i class="feather icon-plus"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" id="" href="{{ url('service/create/form') }}" >&nbsp; Add new</a>
+                    <a class="dropdown-item" id="" href="{{ url('admin/service/form') }}" >&nbsp; Add new</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Basic Manage</h4>
+        <h4 class="card-title">Service Manage</h4>
         <div class="row">
           <div class="col-md-12 responsive">
             <table id="order-listing" class="table dataTable no-footer">
@@ -46,10 +46,10 @@
                         @endif
                     </td>
                     <td align="center">
-                    <a class="btn btn-icons btn-rounded btn-success" href="{{ url('service/create/form/'.$v->id) }}" id="{{ $v->id }}">
+                    <a class="btn btn-icons btn-rounded btn-success" href="{{ url('admin/service/form/'.$v->id) }}" id="{{ $v->id }}">
                         <i class="mdi mdi-plus"></i>
                     </a>
-                    <button class="btn btn-icons btn-rounded btn-danger del_btn" data-href="{{ url('destroy/'.$v->id) }}" data-id="{{ $v->id }}" ><i class="mdi mdi-delete"></i></button>
+                    <button class="btn btn-icons btn-rounded btn-danger del_btn" data-href="{{ url('admin/service/destroy/'.$v->id) }}" data-id="{{ $v->id }}" ><i class="mdi mdi-delete"></i></button>
                   </td>
                 </tr>
               @endforeach

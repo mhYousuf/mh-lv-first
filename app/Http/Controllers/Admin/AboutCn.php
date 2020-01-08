@@ -71,7 +71,7 @@ class AboutCn extends Controller
             session()->flash('update', 'Success');
         }
         session()->put('about', About::find(1));
-        return redirect('deshboard/about');
+        return redirect()->route('admin.about.us');
 
     }
 

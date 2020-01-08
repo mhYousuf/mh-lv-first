@@ -1,11 +1,10 @@
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="keywords" content="HTML5 Template" />
 <meta name="description" content="Sam Martin - Personal Vcard Resume HTML Template" />
 <meta name="author" content="potenzaglobalsolutions.com" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Sam Martin - Personal Vcard Resume HTML Template </title>
+<title>{{ $basic->title }}</title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="{{ asset('frontend/images/favicon.ico')}}" />
@@ -40,6 +39,9 @@
 <!-- Style customizer -->
 <link href="#" data-style="styles" rel="stylesheet">
 <link href="{{ asset('frontend/css/style-customizer.css') }}" rel="stylesheet" type="text/css" />
+<!-- custom css -->
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/my_assets/css/custom.css')}}">
+<!-- endcustom -->
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

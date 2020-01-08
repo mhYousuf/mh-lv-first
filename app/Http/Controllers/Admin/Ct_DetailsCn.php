@@ -81,7 +81,7 @@ class Ct_DetailsCn extends Controller
         }
 
         session()->put('ct_details', Ct_Details::find(1));
-        return redirect('deshboard/details');
+        return redirect()->route('admin.category.details');
     }
 
 
