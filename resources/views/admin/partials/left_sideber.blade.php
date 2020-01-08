@@ -43,11 +43,18 @@
       <div class="collapse" id="page-layouts">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link" href="{{ route('admin.basic') }}"><span class="dot-indicator bg-success" style="margin-right: 10px;"></span> Basic Manage</a>
             
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.social') }}"><span class="dot-indicator bg-success" style="margin-right: 10px;"></span> Social Icon</a>
+=======
+            <a class="nav-link" href="{{ route('admin.basic') }}">Basic Manage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.social') }}">Social Icon</a>
+>>>>>>> a9c5338c09b838c8c0caf6cb2924f8bf8f158ff4
           </li>
         </ul>
       </div>
@@ -121,10 +128,17 @@
       <div class="collapse" id="apps-dropdown">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link" href="{{ route('admin.category') }}"><span class="dot-indicator bg-success" style="margin-right: 10px;"></span> Category</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.category.details') }}"><span class="dot-indicator bg-success" style="margin-right: 10px;"></span> Category Details</a>
+=======
+            <a class="nav-link" href="{{ route('admin.category') }}">Category</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.category.details') }}">Category Details</a>
+>>>>>>> a9c5338c09b838c8c0caf6cb2924f8bf8f158ff4
           </li>
         </ul>
       </div>
