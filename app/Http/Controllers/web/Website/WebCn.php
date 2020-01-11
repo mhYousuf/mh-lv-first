@@ -64,26 +64,18 @@ class WebCn extends Controller
 
     public function sentmail(Request $request)
     {
-       // dd($request->all());
-       $name    =   $request->name;
-       $email   =   $request->email;
-       $phone   =   $request->phone;
-       $message    = "<b>Name: $name <br>Email : $email </b><br>phone : $phone<br>".$request->message;
+      $basic   = Basic::find(1); 
+      $name    = $request->name;
+      $email   = $request->email;
+      $phone   = $request->phone;
+      $message = "<b>Name: $name <br>Email : $email </b><br>phone : $phone<br>".$request->message;
 
-       // echo"<pre>";
-       // print_r($message);
-       // exit();
+      $send = Mail::send([], [], function ($mail) use ($basic, $name, $email, $phone, $message) {
+          $mail->to($basic->email, 'Mithu')
+              ->subject('Contact')
+              ->setBody($message, 'text/html');
+      });
 
-       // mail::send(Basic::find($email), 'Contact', $message);
-
-       // $sent    =   $name, $email, $phone, $message;
-       
-       mail::send(Basic::find($email), $message, function($mail) use($name, $email, $phone, $message){
-        $mail->form('yousufhossain50@gmail.com', 'mithu')
-            ->to(['email'=> $email])
-            ->subject('contact');
-       });
-
-       return redirect()->back();
+      return redirect()->back();
     }
 }
